@@ -1,0 +1,160 @@
+{{- /*gotype: github.com/Jleagle/sonarr-share.Data*/ -}}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shows</title>
+    <link rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==">
+    <style>
+        body {
+            margin: 10px;
+        }
+
+        tbody td,
+        thead th:not(.no-sort) {
+            cursor: pointer;
+        }
+
+        tr img.poster {
+            max-height: 30px;
+            float: left;
+            margin-right: 10px;
+        }
+
+        tr.show img.poster {
+            max-height: 200px;
+        }
+
+        tr small {
+            display: none;
+            white-space: normal;
+        }
+
+        tr.show small {
+            display: block;
+        }
+
+        td.small {
+            width: 1%;
+        }
+
+        td {
+            white-space: nowrap;
+            line-height: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        img.rating {
+            max-height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Shows</h1>
+
+<table class="table table-hover table-striped sortable">
+    <thead>
+    <tr>
+        <th>Show</th>
+        <th>Next</th>
+        <th>Last</th>
+        <th class="no-sort">IMDB</th>
+    </thead>
+    <tbody>
+    {{ range .Shows }}
+        <tr class="{{if not .Ended}}table-success{{end}}">
+            <td data-sort="{{.SortTitle}}">
+                <img src="{{.Poster}}" alt="{{.Title}}" class="poster"/>
+                {{.Title}}
+                <small>{{.Overview}}</small>
+            </td>
+            <td data-sort="{{.NextAiring.Unix}}">{{.NextAiring}}</td>
+            <td data-sort="{{.PreviousAiring.Unix}}">{{.PreviousAiring}}</td>
+            <td class="small">
+                {{if ne .IMDBID ""}}
+                    <a href="https://www.imdb.com/title/{{.IMDBID}}/">IMDB</a>
+                {{end}}
+            </td>
+        </tr>
+    {{end}}
+    </tbody>
+</table>
+
+<script>
+  function clickToShowInfo() {
+    for (const table of document.getElementsByTagName("tbody")) {
+      table.addEventListener("click", e => {
+        const allowed = ['TD', 'SMALL'];
+        console.log(allowed.includes(e.target.nodeName));
+        if (allowed.includes(e.target.nodeName)) {
+          e.target.closest("tr").classList.toggle('show');
+        }
+        e.stopPropagation();
+      });
+    }
+  }
+
+  function minimizeAll() {
+    for (const row of document.querySelectorAll("tr.show")) {
+      row.classList.remove('show');
+    }
+  }
+
+  function initSortable() {
+    // https://github.com/tofsjonas/sortable
+    document.addEventListener("click", function (c) {
+      try {
+        function h(b, a) {
+          return b.nodeName === a ? b : h(b.parentNode, a)
+        }
+
+        const v = c.shiftKey || c.altKey, d = h(c.target, "TH"), m = d.parentNode, n = m.parentNode, g = n.parentNode;
+
+        function p(b) {
+          let a;
+          return v ? b.dataset.sortAlt : null !== (a = b.dataset.sort) && void 0 !== a ? a : b.textContent
+        }
+
+        if ("THEAD" === n.nodeName && g.classList.contains("sortable") && !d.classList.contains("no-sort")) {
+          minimizeAll();
+          let q, f = m.cells, r = +d.dataset.sortTbr;
+          for (c = 0; c < f.length; c++) f[c] === d ? q = +d.dataset.sortCol || c : f[c].setAttribute("aria-sort", "none");
+          f = "descending";
+          if ("descending" === d.getAttribute("aria-sort") || g.classList.contains("asc") && "ascending" !== d.getAttribute("aria-sort")) f = "ascending";
+          d.setAttribute("aria-sort", f);
+          const w = "ascending" === f, x = g.classList.contains("n-last"), t = function (b, a, e) {
+            a = p(a.cells[e]);
+            b = p(b.cells[e]);
+            if (x) {
+              if ("" === a && "" !== b) return -1;
+              if ("" === b && "" !== a) return 1
+            }
+            e = +a - +b;
+            a = isNaN(e) ? a.localeCompare(b) : e;
+            return w ? -a : a
+          };
+          for (c = 0; c < g.tBodies.length; c++) {
+            const k = g.tBodies[c], u = [].slice.call(k.rows, 0);
+            u.sort(function (b, a) {
+              const e = t(b, a, q);
+              return 0 !== e || isNaN(r) ? e : t(b, a, r)
+            });
+            const l = k.cloneNode();
+            l.append.apply(l, u);
+            g.replaceChild(l, k)
+          }
+          clickToShowInfo();
+        }
+      } catch (h) {
+      }
+    });
+  }
+
+  clickToShowInfo();
+</script>
+</body>
+</html>
