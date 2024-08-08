@@ -18,10 +18,10 @@ const cacheKey = "cache"
 
 var (
 	sonarrHost = flag.String("sonarr-host", "sonarr", "Sonarr host")
-	sonarrPort = flag.Int("sonarr-port", 7878, "Sonarr port")
+	sonarrPort = flag.Int("sonarr-port", 8989, "Sonarr port")
 	sonarrKey  = flag.String("sonarr-key", "", "Sonarr key")
 	serveHost  = flag.String("serve-host", "0.0.0.0", "Serve host")
-	servePort  = flag.Int("serve-port", 7879, "Serve port")
+	servePort  = flag.Int("serve-port", 8990, "Serve port")
 
 	templates = template.Must(template.ParseFiles("main.gohtml"))
 )
