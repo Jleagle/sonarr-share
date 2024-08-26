@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/url"
 	"sort"
+	"strconv"
 	"time"
 
 	"github.com/dgraph-io/ristretto"
@@ -182,6 +183,24 @@ type Show struct {
 	LanguageProfileId int       `json:"languageProfileId"`
 	ID                int       `json:"id"`
 	NextAiring        time.Time `json:"nextAiring,omitempty"`
+}
+
+func (s Show) Next() string {
+	if s.NextAiring.IsZero() {
+		return ""
+	}
+	return s.NextAiring.Format("_2 Jan 2006")
+}
+
+func (s Show) Last() string {
+	if s.PreviousAiring.IsZero() {
+		return ""
+	}
+	return s.PreviousAiring.Format("_2 Jan 2006")
+}
+
+func (s Show) IMDB() string {
+	return strconv.FormatFloat(float64(s.Ratings.Value)*10, 'f', 0, 64)
 }
 
 func (s Show) Poster() string {
