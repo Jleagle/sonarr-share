@@ -186,6 +186,9 @@ type Show struct {
 }
 
 func (s Show) Next() string {
+	if s.Ended {
+		return "Ended"
+	}
 	if s.NextAiring.IsZero() {
 		return ""
 	}
