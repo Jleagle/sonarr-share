@@ -81,7 +81,13 @@ func main() {
 			return
 		}
 
+		var future = time.Now().AddDate(10, 0, 0)
+
 		slices.SortFunc(shows, func(a, b Show) int {
+			a.NextAiring = cmp.Or(a.NextAiring, future)
+			b.NextAiring = cmp.Or(b.NextAiring, future)
+			a.PreviousAiring = cmp.Or(a.PreviousAiring, future)
+			b.PreviousAiring = cmp.Or(b.PreviousAiring, future)
 			return cmp.Or(
 				cmp.Compare(a.NextAiring.Unix(), b.NextAiring.Unix()),
 				cmp.Compare(a.PreviousAiring.Unix(), b.PreviousAiring.Unix()),
