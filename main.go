@@ -81,16 +81,10 @@ func main() {
 			return
 		}
 
-		var future = time.Now().AddDate(10, 0, 0)
-
 		slices.SortFunc(shows, func(a, b Show) int {
-			a.NextAiring = cmp.Or(a.NextAiring, future)
-			b.NextAiring = cmp.Or(b.NextAiring, future)
-			a.PreviousAiring = cmp.Or(a.PreviousAiring, future)
-			b.PreviousAiring = cmp.Or(b.PreviousAiring, future)
 			return cmp.Or(
-				cmp.Compare(a.NextAiring.Unix(), b.NextAiring.Unix()),
-				cmp.Compare(a.PreviousAiring.Unix(), b.PreviousAiring.Unix()),
+				cmp.Compare(a.NextSort(), b.NextSort()),
+				cmp.Compare(b.LastSort(), a.LastSort()),
 				cmp.Compare(a.SortTitle, b.SortTitle),
 			)
 		})
@@ -208,6 +202,22 @@ func (s Show) Last() string {
 		return ""
 	}
 	return s.PreviousAiring.Format("_2 Jan 2006")
+}
+
+var future = time.Now().AddDate(10, 0, 0).Unix()
+
+func (s Show) NextSort() int64 {
+	if s.NextAiring.IsZero() {
+		return future
+	}
+	return s.NextAiring.Unix()
+}
+
+func (s Show) LastSort() int64 {
+	if s.PreviousAiring.IsZero() {
+		return future
+	}
+	return s.PreviousAiring.Unix()
 }
 
 func (s Show) IMDB() string {
