@@ -204,19 +204,14 @@ func (s Show) Last() string {
 	return s.PreviousAiring.Format("_2 Jan 2006")
 }
 
-var future = time.Now().AddDate(10, 0, 0).Unix()
-
 func (s Show) NextSort() int64 {
 	if s.NextAiring.IsZero() {
-		return future
+		return time.Now().AddDate(10, 0, 0).Unix()
 	}
 	return s.NextAiring.Unix()
 }
 
 func (s Show) LastSort() int64 {
-	if s.PreviousAiring.IsZero() {
-		return future
-	}
 	return s.PreviousAiring.Unix()
 }
 
