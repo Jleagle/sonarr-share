@@ -11,6 +11,7 @@ import (
 	"net/url"
 	"slices"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/dgraph-io/ristretto"
@@ -89,7 +90,10 @@ func main() {
 			)
 		})
 
-		err = templates.ExecuteTemplate(w, "main.gohtml", Data{Shows: shows})
+		data := Data{Shows: shows}
+		data.Movies = strings.Replace(r.URL.String(), "shows", "movies", 1)
+
+		err = templates.ExecuteTemplate(w, "main.gohtml", data)
 		if err != nil {
 			fmt.Println(err)
 			return
@@ -106,7 +110,8 @@ func main() {
 }
 
 type Data struct {
-	Shows []Show
+	Shows  []Show
+	Movies string
 }
 
 type Show struct {
