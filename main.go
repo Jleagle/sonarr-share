@@ -91,7 +91,7 @@ func main() {
 		})
 
 		data := Data{Shows: shows}
-		data.Movies = strings.Replace(r.URL.String(), "shows", "movies", 1)
+		data.Movies = strings.Replace(fmt.Sprintf("//%s%s", r.Host, r.URL.String()), "shows", "movies", 1)
 
 		err = templates.ExecuteTemplate(w, "main.gohtml", data)
 		if err != nil {
