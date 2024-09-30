@@ -84,8 +84,8 @@ func main() {
 
 		slices.SortFunc(shows, func(a, b Show) int {
 			return cmp.Or(
+				-cmp.Compare(b.LastSort(), a.LastSort()),
 				cmp.Compare(a.NextSort(), b.NextSort()),
-				cmp.Compare(b.LastSort(), a.LastSort()),
 				cmp.Compare(a.SortTitle, b.SortTitle),
 			)
 		})
@@ -210,9 +210,6 @@ func (s Show) Last() string {
 }
 
 func (s Show) NextSort() int64 {
-	if s.NextAiring.IsZero() {
-		return time.Now().AddDate(10, 0, 0).Unix()
-	}
 	return s.NextAiring.Unix()
 }
 
