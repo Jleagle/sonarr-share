@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"html/template"
 	"io"
+	"math"
 	"net/http"
 	"net/url"
 	"slices"
@@ -83,9 +84,12 @@ func main() {
 		}
 
 		slices.SortFunc(shows, func(a, b Show) int {
+
+			aMax := math.Max(float64(a.NextSort()), float64(a.LastSort()))
+			bMax := math.Max(float64(b.NextSort()), float64(b.LastSort()))
+
 			return cmp.Or(
-				-cmp.Compare(b.LastSort(), a.LastSort()),
-				cmp.Compare(a.NextSort(), b.NextSort()),
+				-cmp.Compare(aMax, bMax),
 				cmp.Compare(a.SortTitle, b.SortTitle),
 			)
 		})
