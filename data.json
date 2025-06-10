@@ -1,0 +1,672 @@
+[
+  {
+    "title": "The Boys",
+    "alternateTitles": [
+      {
+        "title": "The Boys 2019",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Пацаны",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "boys",
+    "status": "continuing",
+    "ended": false,
+    "overview": "In a world where superheroes embrace the darker side of their massive celebrity and fame, a group of vigilantes known informally as \"The Boys\" set out to take down corrupt superheroes with no more than blue collar grit and a willingness to fight dirty.",
+    "previousAiring": "2024-07-18T07:00:00Z",
+    "network": "Prime Video",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/39/banner.jpg?lastWrite=637898613365854268",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/series/355567/banners/5f208242a5940.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/39/poster.jpg?lastWrite=638221359078420415",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/posters/5c5c402b075cc.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/39/fanart.jpg?lastWrite=638317797631972955",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/5d120186c0c5f.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/39/clearlogo.png?lastWrite=638395641295533711",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/355567/clearlogo/611bb6e6d40ef.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 62,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2019-07-26T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 7090908108,
+          "releaseGroups": [
+            "SiQ"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2020-10-09T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 31473457417,
+          "releaseGroups": [
+            "BTN",
+            "d3g",
+            "PiR8"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2022-07-08T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 45649782004,
+          "releaseGroups": [
+            "CARVED"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2024-07-18T07:00:00Z",
+          "episodeFileCount": 8,
+          "episodeCount": 8,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 33865960266,
+          "releaseGroups": [
+            "ETHEL",
+            "NLsubs",
+            "SuccessfulCrab",
+            "SUCCESSFULCRAB",
+            "XEBEC"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": true,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 6,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      }
+    ],
+    "year": 2019,
+    "path": "/tv/The Boys",
+    "qualityProfileId": 4,
+    "seasonFolder": true,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 65,
+    "tvdbId": 355567,
+    "tvRageId": 0,
+    "tvMazeId": 15299,
+    "tmdbId": 76479,
+    "firstAired": "2019-07-26T00:00:00Z",
+    "lastAired": "2024-07-18T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "theboys",
+    "imdbId": "tt1190634",
+    "titleSlug": "the-boys",
+    "rootFolderPath": "/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime",
+      "Drama",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2022-01-09T22:34:37Z",
+    "ratings": {
+      "votes": 781097,
+      "value": 8.6
+    },
+    "statistics": {
+      "seasonCount": 5,
+      "episodeFileCount": 32,
+      "episodeCount": 32,
+      "totalEpisodeCount": 100,
+      "sizeOnDisk": 118080107795,
+      "releaseGroups": [
+        "SiQ",
+        "BTN",
+        "d3g",
+        "PiR8",
+        "CARVED",
+        "ETHEL",
+        "NLsubs",
+        "SuccessfulCrab",
+        "SUCCESSFULCRAB",
+        "XEBEC"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 39
+  },
+  {
+    "title": "The Handmaid's Tale",
+    "alternateTitles": [
+      {
+        "title": "The Handmaids Tale",
+        "seasonNumber": -1
+      },
+      {
+        "title": "A Decadência de uma Espécie",
+        "seasonNumber": -1
+      },
+      {
+        "title": "La Servante écarlate",
+        "seasonNumber": -1
+      },
+      {
+        "title": "El cuento de la criada",
+        "seasonNumber": -1
+      },
+      {
+        "title": "Il racconto dell’ancella",
+        "seasonNumber": -1
+      },
+      {
+        "title": "O Conto da Aia (The Handmaid's Tale)",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "handmaids tale",
+    "status": "ended",
+    "ended": true,
+    "overview": "In a dystopian near-future, the totalitarian and Christian-fundamentalist government of Gilead rules the former United States amidst an ongoing civil war and subjugates women, who are not allowed to work, control money, or even read. Widespread infertility due to environmental contamination has resulted in the conscription of young fertile women—called Handmaids, according to biblical precedent—who are assigned to the homes of the elite, where they must have ritualized sex with the men in order to become pregnant and bear children for those men and their wives.",
+    "previousAiring": "2025-05-27T04:00:00Z",
+    "network": "Hulu",
+    "airTime": "00:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/42/banner.jpg?lastWrite=638084565963146255",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/graphical/321239-g3.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/42/poster.jpg?lastWrite=638084565965346263",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/321239/posters/60642fcc0a0a1.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/42/fanart.jpg?lastWrite=638084565969106278",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/fanart/original/321239-3.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/42/clearlogo.png?lastWrite=638395641409894322",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/321239/clearlogo/611b8c76503f4.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 51,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 13,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 4,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2021-06-16T04:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 12164535462,
+          "releaseGroups": [],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 5,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2022-11-09T05:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 6524024511,
+          "releaseGroups": [
+            "DIMEPIECE",
+            "GGEZ",
+            "GLHF",
+            "NTb",
+            "TRUFFLE"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 6,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2025-05-27T04:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 8868489251,
+          "releaseGroups": [
+            "FLUX",
+            "NTb"
+          ],
+          "percentOfEpisodes": 100
+        }
+      }
+    ],
+    "year": 2017,
+    "path": "/tv/The Handmaid's Tale",
+    "qualityProfileId": 8,
+    "seasonFolder": true,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 51,
+    "tvdbId": 321239,
+    "tvRageId": 0,
+    "tvMazeId": 16579,
+    "tmdbId": 69478,
+    "firstAired": "2017-04-26T00:00:00Z",
+    "lastAired": "2025-05-27T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "thehandmaidstale",
+    "imdbId": "tt5834204",
+    "titleSlug": "the-handmaids-tale",
+    "rootFolderPath": "/tv",
+    "certification": "TV-MA",
+    "genres": [
+      "Drama",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "tags": [],
+    "added": "2022-01-09T22:34:37Z",
+    "ratings": {
+      "votes": 281475,
+      "value": 8.3
+    },
+    "statistics": {
+      "seasonCount": 6,
+      "episodeFileCount": 30,
+      "episodeCount": 30,
+      "totalEpisodeCount": 117,
+      "sizeOnDisk": 27557049224,
+      "releaseGroups": [
+        "DIMEPIECE",
+        "GGEZ",
+        "GLHF",
+        "NTb",
+        "TRUFFLE",
+        "FLUX"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 42
+  },
+  {
+    "title": "The Mandalorian",
+    "alternateTitles": [
+      {
+        "title": "The Mandalorian 2020",
+        "seasonNumber": -1
+      }
+    ],
+    "sortTitle": "mandalorian",
+    "status": "continuing",
+    "ended": false,
+    "overview": "After the fall of the Empire, a lone Mandalorian makes his way through a lawless galaxy with his foundling, Grogu.",
+    "network": "Disney+",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/43/banner.jpg?lastWrite=638061644751825123",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/series/361753/banners/62000530.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/43/poster.jpg?lastWrite=638136028667553946",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/series/361753/posters/6403f8c42f916.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/43/fanart.jpg?lastWrite=638129973691532325",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/361753/backgrounds/63f162936e3ea.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/43/clearlogo.png?lastWrite=638395641497334788",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/361753/clearlogo/611b89936b3e3.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 8,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      }
+    ],
+    "year": 2019,
+    "path": "/tv/The Mandalorian",
+    "qualityProfileId": 4,
+    "seasonFolder": true,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 40,
+    "tvdbId": 361753,
+    "tvRageId": 0,
+    "tvMazeId": 38963,
+    "tmdbId": 82856,
+    "firstAired": "2019-11-12T00:00:00Z",
+    "lastAired": "2023-04-19T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "themandalorian",
+    "imdbId": "tt8111088",
+    "titleSlug": "the-mandalorian",
+    "rootFolderPath": "/tv",
+    "certification": "TV-14",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2022-01-09T22:34:37Z",
+    "ratings": {
+      "votes": 627718,
+      "value": 8.6
+    },
+    "statistics": {
+      "seasonCount": 3,
+      "episodeFileCount": 0,
+      "episodeCount": 0,
+      "totalEpisodeCount": 24,
+      "sizeOnDisk": 0,
+      "releaseGroups": [],
+      "percentOfEpisodes": 0
+    },
+    "languageProfileId": 1,
+    "id": 43
+  },
+  {
+    "title": "Star Trek: Strange New Worlds",
+    "alternateTitles": [],
+    "sortTitle": "star trek strange new worlds",
+    "status": "continuing",
+    "ended": false,
+    "overview": "Follow Christopher Pike, Spock and Number One in the decade before Capt. Kirk boarded the Enterprise as they explore new worlds around the galaxy.",
+    "nextAiring": "2025-07-17T07:00:00Z",
+    "previousAiring": "2023-08-10T07:00:00Z",
+    "network": "Paramount+",
+    "airTime": "03:00",
+    "images": [
+      {
+        "coverType": "banner",
+        "url": "/MediaCover/73/banner.jpg?lastWrite=637873963848557625",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/382389/banners/626eb2b5e3a91.jpg"
+      },
+      {
+        "coverType": "poster",
+        "url": "/MediaCover/73/poster.jpg?lastWrite=637851044121595004",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/382389/posters/6249e96845a7e.jpg"
+      },
+      {
+        "coverType": "fanart",
+        "url": "/MediaCover/73/fanart.jpg?lastWrite=638208818405922449",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/382389/backgrounds/646e420f72ba6.jpg"
+      },
+      {
+        "coverType": "clearlogo",
+        "url": "/MediaCover/73/clearlogo.png?lastWrite=638395641681055769",
+        "remoteUrl": "https://artworks.thetvdb.com/banners/v4/series/382389/clearlogo/626eac0b33167.png"
+      }
+    ],
+    "originalLanguage": {
+      "id": 1,
+      "name": "English"
+    },
+    "seasons": [
+      {
+        "seasonNumber": 0,
+        "monitored": false,
+        "statistics": {
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 3,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      },
+      {
+        "seasonNumber": 1,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2022-07-07T07:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 31786034577,
+          "releaseGroups": [
+            "CAKES",
+            "GLHF",
+            "STORIES"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 2,
+        "monitored": true,
+        "statistics": {
+          "previousAiring": "2023-08-10T07:00:00Z",
+          "episodeFileCount": 10,
+          "episodeCount": 10,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 22078948159,
+          "releaseGroups": [
+            "ETHEL"
+          ],
+          "percentOfEpisodes": 100
+        }
+      },
+      {
+        "seasonNumber": 3,
+        "monitored": true,
+        "statistics": {
+          "nextAiring": "2025-07-17T07:00:00Z",
+          "episodeFileCount": 0,
+          "episodeCount": 0,
+          "totalEpisodeCount": 10,
+          "sizeOnDisk": 0,
+          "releaseGroups": [],
+          "percentOfEpisodes": 0
+        }
+      }
+    ],
+    "year": 2022,
+    "path": "/tv/Star Trek - Strange New Worlds",
+    "qualityProfileId": 4,
+    "seasonFolder": true,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "useSceneNumbering": false,
+    "runtime": 54,
+    "tvdbId": 382389,
+    "tvRageId": 0,
+    "tvMazeId": 48090,
+    "tmdbId": 103516,
+    "firstAired": "2022-05-05T00:00:00Z",
+    "lastAired": "2025-09-11T00:00:00Z",
+    "seriesType": "standard",
+    "cleanTitle": "startrekstrangenewworlds",
+    "imdbId": "tt12327578",
+    "titleSlug": "star-trek-strange-new-worlds",
+    "rootFolderPath": "/tv",
+    "certification": "TV-PG",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Science Fiction"
+    ],
+    "tags": [],
+    "added": "2022-01-27T10:59:27Z",
+    "ratings": {
+      "votes": 64783,
+      "value": 8.3
+    },
+    "statistics": {
+      "seasonCount": 3,
+      "episodeFileCount": 20,
+      "episodeCount": 20,
+      "totalEpisodeCount": 33,
+      "sizeOnDisk": 53864982736,
+      "releaseGroups": [
+        "CAKES",
+        "GLHF",
+        "STORIES",
+        "ETHEL"
+      ],
+      "percentOfEpisodes": 100
+    },
+    "languageProfileId": 1,
+    "id": 73
+  }
+]
