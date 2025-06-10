@@ -94,7 +94,11 @@ func main() {
 			)
 		})
 
-		data := Data{Shows: shows}
+		data := Data{
+			Shows: shows,
+			Now:   time.Now(),
+		}
+
 		data.Movies = strings.Replace(fmt.Sprintf("//%s%s", r.Host, r.URL.String()), "shows", "movies", 1)
 
 		err = templates.ExecuteTemplate(w, "main.gohtml", data)
@@ -116,6 +120,7 @@ func main() {
 type Data struct {
 	Shows  []Show
 	Movies string
+	Now    time.Time
 }
 
 type Show struct {
