@@ -75,35 +75,32 @@
     </thead>
     <tbody>
     {{ range .Shows }}
-        <tr class="{{if not .Ended}}table-success{{end}}">
-            <td data-sort="{{.SortTitle}}">
-                <img src="{{.Poster}}" alt="{{.Title}}" class="poster"/>
-                {{.Title}}
-                <small>{{.Overview}}</small>
-            </td>
-            <td data-sort="{{.NextSort}}">{{.Next}}</td>
-            <td data-sort="{{.LastSort}}">{{.Last}}</td>
-            <td>
-                {{ range .Seasons }}
-                    {{if gt .SeasonNumber 0 }}
-                        {{if gt .Statistics.EpisodeCount 0}}
-                            <span class="badge text-bg-success" data-debug="{{.Statistics.PreviousAiring.Unix}}">{{.SeasonNumber}}</span>
-                        {{else}}
-                            <span class="badge text-bg-danger" data-debug="{{.Statistics.PreviousAiring.Unix}}">{{.SeasonNumber}}</span>
-                        {{end}}
-                    {{end}}
+    <tr class="{{if not .Ended}}table-success{{end}}">
+        <td data-sort="{{.SortTitle}}">
+            <img src="{{.Poster}}" alt="{{.Title}}" class="poster"/>
+            {{.Title}}
+            <small>{{.Overview}}</small>
+        </td>
+        <td data-sort="{{.NextSort}}">{{.Next}}</td>
+        <td data-sort="{{.LastSort}}">{{.Last}}</td>
+        <td>
+            {{ range .Seasons }}
+                {{if gt .SeasonNumber 0 }}
+                    <span class="badge {{if .Monitored}}text-bg-success{{else}}text-bg-danger{{end}}">{{.SeasonNumber}}</span>
                 {{end}}
-            </td>
-            <td class="small" data-sort="{{.Ratings.Value}}">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/440px-IMDB_Logo_2016.svg.png" alt="IMDB" class="rating" title="IMDB">
-                {{.IMDB}}%
-            </td>
-            <td class="small">
-                {{if ne .IMDBID ""}}
-                    <a href="https://www.imdb.com/title/{{.IMDBID}}/">IMDB</a>
-                {{end}}
-            </td>
-        </tr>
+            {{end}}
+            {{end}}
+        </td>
+        <td class="small" data-sort="{{.Ratings.Value}}">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/440px-IMDB_Logo_2016.svg.png" alt="IMDB" class="rating" title="IMDB">
+            {{.IMDB}}%
+        </td>
+        <td class="small">
+            {{if ne .IMDBID ""}}
+                <a href="https://www.imdb.com/title/{{.IMDBID}}/">IMDB</a>
+            {{end}}
+        </td>
+    </tr>
     {{end}}
     </tbody>
 </table>
