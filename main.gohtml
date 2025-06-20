@@ -81,12 +81,10 @@
             <td>
                 {{ range .Seasons }}
                     {{if gt .SeasonNumber 0 }}
-                        {{if and (gt .Statistics.PreviousAiring.Unix 0) (lt .Statistics.PreviousAiring.Unix $.Now.Unix) }}
-                            {{if gt .Statistics.EpisodeCount 0}}
-                                <span class="badge text-bg-success" data-debug="{{.Statistics.PreviousAiring.Unix}}">{{.SeasonNumber}}</span>
-                            {{else}}
-                                <span class="badge text-bg-danger" data-debug="{{.Statistics.PreviousAiring.Unix}}">{{.SeasonNumber}}</span>
-                            {{end}}
+                        {{if gt .Statistics.EpisodeCount 0}}
+                            <span class="badge text-bg-success" data-debug="{{.Statistics.PreviousAiring.Unix}}">{{.SeasonNumber}}</span>
+                        {{else}}
+                            <span class="badge text-bg-danger" data-debug="{{.Statistics.PreviousAiring.Unix}}">{{.SeasonNumber}}</span>
                         {{end}}
                     {{end}}
                 {{end}}
