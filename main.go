@@ -62,6 +62,7 @@ func main() {
 			defer resp.Body.Close()
 
 			b, err = io.ReadAll(resp.Body)
+			//b, err = os.ReadFile("data.json")
 			if err != nil {
 				fmt.Println(err)
 				return
@@ -242,4 +243,35 @@ func (s Show) Poster() string {
 		}
 	}
 	return "https://critics.io/img/movies/poster-placeholder.png"
+}
+
+type seasonRange struct {
+	Start     int
+	End       int
+	Monitored bool
+	first     bool
+}
+
+func (s Show) GetSeasons() (ranges []seasonRange) {
+
+	var previous = seasonRange{first: true}
+
+	for _, v := range s.Seasons {
+		if v.SeasonNumber == 0 {
+			continue // Specials
+		}
+		if ((v.Statistics.EpisodeCount > 0) != previous.Monitored) || previous.first {
+			previous = seasonRange{
+				Start:     v.SeasonNumber,
+				End:       v.SeasonNumber,
+				Monitored: v.Statistics.EpisodeCount > 0,
+				first:     false,
+			}
+			ranges = append(ranges, previous)
+		} else {
+			ranges[len(ranges)-1].End = v.SeasonNumber
+		}
+	}
+
+	return ranges
 }

@@ -84,9 +84,11 @@
             <td data-sort="{{.NextSort}}">{{.Next}}</td>
             <td data-sort="{{.LastSort}}">{{.Last}}</td>
             <td>
-                {{ range .Seasons }}
-                    {{if gt .SeasonNumber 0 }}
-                        <span class="badge {{if .Monitored}}text-bg-success{{else}}text-bg-danger{{end}}">{{.SeasonNumber}}</span>
+                {{ range .GetSeasons }}
+                    {{if eq .Start .End}}
+                        <span class="badge {{if .Monitored}}text-bg-success{{else}}text-bg-danger{{end}}">{{.Start}}</span>
+                    {{else}}
+                        <span class="badge {{if .Monitored}}text-bg-success{{else}}text-bg-danger{{end}}">{{.Start}}-{{.End}}</span>
                     {{end}}
                 {{end}}
             </td>
