@@ -44,6 +44,10 @@ func main() {
 		panic(err)
 	}
 
+	http.HandleFunc("GET /imdb.svg", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "icons/imdb.svg")
+	})
+
 	http.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
 
 		var b []byte

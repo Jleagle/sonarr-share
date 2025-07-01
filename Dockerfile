@@ -9,6 +9,7 @@ FROM alpine:latest AS runtime-env
 WORKDIR /root/
 COPY --from=build-env /root/sonarr-share ./
 COPY ./main.gohtml ./
+COPY ./icons ./icons
 RUN apk update \
   && apk add ca-certificates curl bash
 ENTRYPOINT ["./sonarr-share"]
