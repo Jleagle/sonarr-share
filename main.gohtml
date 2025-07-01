@@ -75,7 +75,7 @@
     </thead>
     <tbody>
     {{ range .Shows }}
-        <tr class="{{if not .Ended}}table-success{{end}}">
+        <tr>
             <td data-sort="{{.SortTitle}}">
                 <img src="{{.Poster}}" alt="{{.Title}}" class="poster"/>
                 {{.Title}}
