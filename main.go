@@ -12,6 +12,7 @@ import (
 	"net/url"
 	"slices"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/dgraph-io/ristretto"
@@ -103,7 +104,7 @@ func main() {
 			Now:   time.Now(),
 		}
 
-		data.Movies = fmt.Sprintf("//%s.%s", "movies", r.Host)
+		data.Movies = strings.Replace(r.Host, "shows", "movies", 1)
 
 		err = templates.ExecuteTemplate(w, "main.gohtml", data)
 		if err != nil {
